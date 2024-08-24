@@ -25,7 +25,9 @@
   gap: 30px;
   max-width: max-content;
   margin: auto;
+  flex-wrap: wrap;
 }
+
 .searching_clock {
   display: flex;
   align-items: center;
@@ -155,7 +157,10 @@
   margin: 100px auto;
   overflow: hidden;
   padding: 8px;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  gap: 15px;
 }
 
 .form-wrapper #search {
@@ -167,11 +172,12 @@
   -moz-border-radius: 3px;
   border-radius: 3px;
   color: #999;
-  float: left;
   font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
   height: 100%;
-  padding: 10px;
-  width: 320px;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  max-width: 320px;
 }
 
 .form-wrapper #search:focus {
@@ -213,7 +219,6 @@
   color: #fafafa;
   cursor: pointer;
   height: 42px;
-  float: right;
   font: 15px Arial, Helvetica;
   padding: 0;
   text-transform: uppercase;
@@ -256,4 +261,10 @@
   margin-top: 55px;
   padding-left: 3px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    justify-content: center;
+  }
 }
